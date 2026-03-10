@@ -2,7 +2,7 @@
 
 const params = parseQuery(location.href)
 
-const lang = params['lang'] || 'en'
+const lang = (params['lang'] || 'en').toLowerCase()
 
 const ROOM = (params['room'] || '2').toUpperCase()
 const LOCK = (params['lock'] || 'P').toUpperCase()
