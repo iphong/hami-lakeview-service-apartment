@@ -8,7 +8,83 @@
 <body>
 
 
-<section id="message">
+<section id="message-en" data-lang="en" style="display: none;">
+<h3>🔑 CHECK-IN PROCEDURE HAMI LAKEVIEW SERVICE APT. (CHECK-IN)</h3>
+
+<div class="info-container">
+	<div class="item room">
+		<div class="label">Room</div>
+		<div class="text">{{ROOM}}01</div>
+	</div>
+	<div class="item door">
+		<div class="label">Door Code</div>
+		<div class="text">{{DOOR_CODE}}</div>
+	</div>
+	<div class="item box">
+		<div class="label">Key Box</div>
+		<div class="text">Hami.{{LOCK}}<br>Code: {{LOCK_KEY}}</div>
+	</div>
+	<div class="item wifi">
+		<div class="label">WIFI</div>
+		<div class="text">SSID: TANG {{ROOM}}<br>PASS: 123cthuykhue{{ROOM}}</div>
+	</div>
+	<div class="item contact">
+		<div class="label">EMERGENCY</div>
+		<div class="text"><a href="tel:(+84) 978.619.728">(+84) 978.619.728</a></div>
+	</div>
+	<div class="item room"></div>
+</div>
+
+<p>Welcome to <b>HAMI LAKEVIEW</b>. To start your stay as smoothly as possible, please follow the instructions below:</p>
+
+<p><b>The address of Hami LakeView is:</b> No. 4 Alley 123 Thuy Khue, Tay Ho, Hanoi. (Enter the 3m alley, then at the first cross street look left to see Hami. Please note it is Alley 123 Thuy Khue, not Alley 123A).</p>
+
+<div class="embed-map-responsive"><div class="embed-map-container"><iframe class="embed-map-frame" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=600&height=400&hl=en&q=hami%20lakeview%20service%20apartment&t=&z=16&ie=UTF8&iwloc=B&output=embed"></iframe><a href="https://funclicker.org" style="font-size:2px!important;color:gray!important;position:absolute;bottom:0;left:0;z-index:1;max-height:1px;overflow:hidden">Fun Clicker</a></div><style>.embed-map-responsive{position:relative;text-align:right;width:100%;height:0;padding-bottom:66.66666666666666%;}.embed-map-container{overflow:hidden;background:none!important;width:100%;height:100%;position:absolute;top:0;left:0;}.embed-map-frame{width:100%!important;height:100%!important;position:absolute;top:0;left:0;}</style></div>
+
+<p><b>Directions:</b> Use code: {{DOOR_CODE}} to open the main entrance.</p>
+
+<OL>
+	<li>✨<b>Check-in time</b></li>
+	<ul>
+		<li>Standard check-in time: From 14:00.</li>
+		<li>If you arrive earlier, please let us know in advance so we can check room availability.</li>
+	</ul>
+
+	<li>✨ <b>How to get the key card</b></li>
+	<ul>
+		<li>The key card for {{ROOM}}01 is placed in the key box (Hami.{{LOCK}}) at the lobby entrance on the 1st floor. Box code: [{{LOCK_KEY}}].</li>
+		<li>Please note: The key card works for the lobby entrance, your apartment door, and the elevator.</li>
+	</ul>
+
+	<li>✨ <b>Elevator instructions</b></li>
+	<ul>
+		<li>Use the key card on the red area inside the elevator. When it turns green, select the floor of your apartment.</li>
+	</ul>
+
+	<li>✨ <b>How to use the apartment door key card</b></li>
+	<ul>
+		<li>To open: gently tap the card on the reader. When the light turns green and you hear a beep, turn the handle to open.
+To close: Simply shut the door and the lock will automatically engage after 3–5 seconds.</li>
+	</ul>
+
+	<li>✨ <b>Registration procedure (required)</b></li>
+	<ul>
+		<li>To declare temporary residence as required by law, please:</li>
+		<li>Send photos of the ID card or passport of all staying guests via [Zalo/Messenger/Airbnb].</li>
+		<li>This information is kept confidential and used only for registration purposes.</li>
+		<li>Pay for your booking (message us for payment instructions).</li>
+		<li></li>
+	</ul>
+
+	<li>✨ <b>Quick amenities info</b></li>
+	<ul>
+		<li>Wi-Fi password: [ TANG {{ROOM}}] / [123cthuykhue{{ROOM}}].</li>
+		<li>Emergency/support phone: (+84)978619728.</li>
+	</ul>
+</OL>
+</section>
+
+<section id="message-vi" data-lang="vi" style="display: none;">
 <h3>🔑 QUY TRÌNH NHẬN PHÒNG HAMI LAKEVIEW SERVICE APT. (CHECK-IN)></h3>
 
 <div class="info-container">
@@ -82,7 +158,6 @@
 		<li>Số điện thoại khẩn cấp/Hỗ trợ: (+84)978619728.</li>
 	</ul>
 </OL>
-
 </section>
 <script src="scripts.js"></script>
 </body>

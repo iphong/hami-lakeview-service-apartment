@@ -2,6 +2,8 @@
 
 const params = parseQuery(location.href)
 
+const lang = params['lang'] || 'en'
+
 const ROOM = (params['room'] || '2').toUpperCase()
 const LOCK = (params['lock'] || 'P').toUpperCase()
 const LOCK_KEY_MAP = {
@@ -27,16 +29,22 @@ function parseQuery(url) {
     return params
 }
 
-const messageEl = document.getElementById('message')
-const message = messageEl?.innerHTML || ''
+function renderMessage(id) {
+    const messageEl = document.getElementById(id)
+    const message = messageEl?.innerHTML || ''
 
-const renderedMessage = message.replace(/{{\s*([^}\s]+)\s*}}/g, (_, key) => {
-    return Object.prototype.hasOwnProperty.call(data, key) ? data[key] : ''
-})
+    const renderedMessage = message.replace(/{{\s*([^}\s]+)\s*}}/g, (_, key) => {
+        return Object.prototype.hasOwnProperty.call(data, key) ? data[key] : ''
+    })
 
-if (messageEl) {
-    messageEl.innerHTML = renderedMessage
+    if (messageEl) {
+        messageEl.innerHTML = renderedMessage
+    }
 }
 
+renderMessage('message-vi')
+renderMessage('message-en')
+
+document.querySelectorAll(`#message-${lang}`).forEach(el => el.style.display = 'block')
 
 
