@@ -28,6 +28,10 @@
 <body>
 	<h2>CHECKIN URL Generator</h2>
 	<div>
+		<select id="lang ">
+			<option>EN</option>
+			<option>VI</option>
+		</select>
 		<select id="room">
 			<option value="2">201</option>
 			<option value="3">301</option>
@@ -49,12 +53,13 @@
 	(() => {
 		const baseUrl = 'http://iphong.github.io/hami-lakeview-service-apartment/instructions'
 		const room = document.getElementById('room')
+		const lang = document.getElementById('lang')
 		const lock = document.getElementById('lock')
 		const output = document.getElementById('url')
 		const copyBtn = document.getElementById('copy')
 
 		const render = () => {
-			output.textContent = `${baseUrl}?room=${room.value}&lock=${lock.value}`
+			output.textContent = `${baseUrl}?room=${room.value}&lock=${lock.value}&lang=${lang.value}`
 		}
 
 		const flash = (text) => {
