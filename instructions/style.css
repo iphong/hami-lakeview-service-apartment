@@ -4,6 +4,15 @@ body {
 	line-height: 1.6;
 }
 
+#message {
+	max-width: 780px;
+	margin: 20px auto;
+}
+
+ol {
+	margin: 0;
+}
+
 .info-container {
 	background: #ffffff;
 	border: 1px solid #cccccc;
