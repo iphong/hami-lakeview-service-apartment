@@ -79,7 +79,8 @@
 				alert('Failed to copy to clipboard')
 			}
 		}
-
+		
+		lang.addEventListener('change', render)
 		room.addEventListener('change', render)
 		lock.addEventListener('change', render)
 		copyBtn.addEventListener('click', copyToClipboard)
