@@ -83,6 +83,7 @@
 		lang.addEventListener('change', render)
 		room.addEventListener('change', render)
 		lock.addEventListener('change', render)
+		output.addEventListener('click', copyToClipboard)
 		copyBtn.addEventListener('click', copyToClipboard)
 
 		render()
