@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Checkin Generator</title>
+</head>
+<body>
+	<h2>CHECKIN Generator</h2>
+	<select id="room">
+		<option>2</option>
+		<option>3</option>
+		<option>4</option>
+		<option>5</option>
+		<option>6</option>
+		<option>7</option>
+	</select>
+
+	<select id="lock">
+		<option>P</option>
+		<option>A</option>
+	</select>
+	<button id="copy">COPY</button>
+	<output id="url"></output>
+
+<script>
+	(() => {
+		const baseUrl = 'http://iphong.github.io/hami-lakeview-service-apartment/instructions'
+		const room = document.getElementById('room')
+		const lock = document.getElementById('lock')
+		const output = document.getElementById('url')
+		const copyBtn = document.getElementById('copy')
+
+		const render = () => {
+			output.textContent = `${baseUrl}?room=${room.value}&lock=${lock.value}`
+		}
+
+		const flash = (text) => {
+			const prev = copyBtn.textContent
+			copyBtn.textContent = text
+			setTimeout(() => (copyBtn.textContent = prev), 1200)
+		}
+
+		const copyToClipboard = async () => {
+			try {
+				await navigator.clipboard.writeText(output.textContent)
+				flash('COPIED')
+			} catch {
+				alert('Failed to copy to clipboard')
+			}
+		}
+
+		room.addEventListener('change', render)
+		lock.addEventListener('change', render)
+		copyBtn.addEventListener('click', copyToClipboard)
+
+		render()
+	})()
+</script>
+</body>
+</html>

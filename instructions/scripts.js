@@ -12,7 +12,8 @@ const LOCK_KEY_MAP = {
 const data = {
     ROOM,
     LOCK,
-    LOCK_KEY: LOCK_KEY_MAP[LOCK]
+    LOCK_KEY: LOCK_KEY_MAP[LOCK],
+    DOOR_CODE: '119900#'
 }
 
 function parseQuery(url) {

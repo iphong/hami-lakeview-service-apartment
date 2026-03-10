@@ -6,23 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 </head>
 <body>
-<!-- <h2>Message Generator</h2>
 
-<input id="name">
-
-<select id="room">
-	<option>2</option>
-	<option>3</option>
-	<option>4</option>
-	<option>5</option>
-	<option>6</option>
-	<option>7</option>
-</select>
-
-<select id="box">
-	<option>P</option>
-	<option>A</option>
-</select> -->
 
 <section id="message">
 <h3>🔑 QUY TRÌNH NHẬN PHÒNG HAMI LAKEVIEW SERVICE APT. (CHECK-IN)></h3>
@@ -34,7 +18,7 @@
 	</div>
 	<div class="item door">
 		<div class="label">Door Code</div>
-		<div class="text">119900#</div>
+		<div class="text">{{DOOR_CODE}}</div>
 	</div>
 	<div class="item box">
 		<div class="label">Key Box</div>
@@ -46,7 +30,7 @@
 	</div>
 	<div class="item contact">
 		<div class="label">EMERGENCY</div>
-		<div class="text">(+84) 978.619.728</div>
+		<div class="text"><a href="tel:(+84) 978.619.728">(+84) 978.619.728</a></div>
 	</div>
 	<div class="item room"></div>
 </div>
@@ -57,7 +41,7 @@
 
 <div class="embed-map-responsive"><div class="embed-map-container"><iframe class="embed-map-frame" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=600&height=400&hl=en&q=hami%20lakeview%20service%20apartment&t=&z=16&ie=UTF8&iwloc=B&output=embed"></iframe><a href="https://funclicker.org" style="font-size:2px!important;color:gray!important;position:absolute;bottom:0;left:0;z-index:1;max-height:1px;overflow:hidden">Fun Clicker</a></div><style>.embed-map-responsive{position:relative;text-align:right;width:100%;height:0;padding-bottom:66.66666666666666%;}.embed-map-container{overflow:hidden;background:none!important;width:100%;height:100%;position:absolute;top:0;left:0;}.embed-map-frame{width:100%!important;height:100%!important;position:absolute;top:0;left:0;}</style></div>
 
-<p><B>Hướng Dẫn đến nơi:</B> Sử dụng mã số: 119900# để mở cửa ra vào.</p>
+<p><B>Hướng Dẫn đến nơi:</B> Sử dụng mã số: {{DOOR_CODE}} để mở cửa ra vào.</p>
 
 <OL>
 	<li>✨<b>Thời gian nhận phòng</b></li>
