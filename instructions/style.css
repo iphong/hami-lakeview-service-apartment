@@ -3,3 +3,37 @@ body {
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
 	line-height: 1.6;
 }
+
+.info-container {
+	background: #ffffff;
+	border: 1px solid #cccccc;
+	padding: 0px;
+	margin: 20px auto;
+	max-width: 800px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	display: flex;
+	flex-direction: row;
+}
+
+.info-container .item {
+	display: block;
+	padding: 10px 30px;
+	text-wrap: nowrap;
+}
+
+.info-container .item .label {
+	font-weight: bold;
+    color: #999;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.info-container .item .text {
+	color: #333333;
+    font-size: 14px;
+}
+.info-container .item.door .text,
+.info-container .item.room .text {
+    font-size: 24px;
+	font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
