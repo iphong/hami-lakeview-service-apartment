@@ -5,7 +5,7 @@ body {
 }
 
 .info-container {
-	background: red;
+	background: #ffffff;
 	border: 1px solid #cccccc;
 	padding: 0px;
 	margin: 20px auto;
@@ -13,12 +13,14 @@ body {
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 	display: flex;
 	flex-direction: row;
+	flex-wrap: wrap; /* allow .item blocks to flow to the next line when needed */
 }
 
 .info-container .item {
 	display: block;
 	padding: 10px 30px;
-	text-wrap: nowrap;
+	flex: 0 1 auto;
+	white-space: normal;
 }
 
 .info-container .item .label {
@@ -31,6 +33,11 @@ body {
 .info-container .item .text {
 	color: #333333;
     font-size: 14px;
+	min-height: 60px;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
 }
 .info-container .item.door .text,
 .info-container .item.room .text {
