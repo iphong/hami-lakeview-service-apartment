@@ -5,10 +5,12 @@ const params = parseQuery(location.href)
 const lang = (params['lang'] || 'en').toLowerCase()
 
 const ROOM = (params['room'] || '2').toUpperCase()
-const LOCK = (params['lock'] || 'P').toUpperCase()
+const LOCK = (params['lock'] || 'A').toUpperCase()
 const LOCK_KEY_MAP = {
     P: '2408',
-    A: '0911'
+    A: '0911',
+    H: '1125',
+    M: '2406'
 }
 
 const data = {
